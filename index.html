@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'pln4otq',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/lit7drp.css">
     <link rel="stylesheet" href="style.css">
@@ -52,12 +62,12 @@
 
     <section id="contact">
         <h2 class="section-title">CONTACT</h2>
-        
+
         <div class="SNS">
             <p>Instagram</p>
             <a href="https://www.instagram.com/eps__1/">@eps__1</a>
         </div>
-        
+
         <div class="SNS">
             <p>Youtube</p>
             <a href="https://www.youtube.com/@Tijimaru">@Tijimaru</a>

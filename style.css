@@ -159,7 +159,18 @@ nav ul li a:hover {
     height: 150px;
 }
 
+.content-title {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #333;
+    margin-bottom: 10px;
+}
+
 .content .profile-text {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-weight: 300;
+    font-style: normal;
     text-align: left;
     margin-left: 20px;
 }
@@ -270,4 +281,3 @@ footer .footer-nav {
     height: auto;
     display: block;
 }
-
