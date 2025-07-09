@@ -19,42 +19,6 @@
     border-radius: 2px;
 }
 
-/* スマホ用 */
-@media screen and (max-width: 768px) {
-    .nav {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: #ffffff;
-        overflow: hidden;
-        max-height: 0;
-        opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.3s ease;
-        z-index: 500;
-    }
-
-    .nav.open {
-        max-height: 300px;
-        /* メニューの高さに合わせて調整 */
-        opacity: 1;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        padding: 1em;
-    }
-
-    .nav ul li {
-        margin: 10px 0;
-    }
-
-    .hamburger {
-        display: flex;
-        z-index: 1100;
-        position: relative;
-    }
-}
 
 
 
@@ -66,7 +30,9 @@
 
 
 
-img {
+
+
+.img1 {
     width: max-content;
     height: max-content;
     display: block;
@@ -74,7 +40,7 @@ img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 10px;        
+    border-radius: 10px;
 }
 
 
@@ -135,13 +101,14 @@ nav ul li a:hover {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px 4%;
+    margin-bottom: 100px;
 }
 
 #profile h2 {
     font-family: "norman-variable", sans-serif;
     font-variation-settings: 'wght' 400;
     font-size: 2rem;
-    margin-bottom: 40px;
+    margin-bottom: 140px;
     color: #333;
 }
 
@@ -156,6 +123,14 @@ nav ul li a:hover {
 
 .content {
     display: flex;
+    flex-direction: row;
+}
+
+.content img {
+    width: 70%;
+    height: auto;
+    display: block;
+    /*margin-right: 30px;*/
 }
 
 #profile img {
@@ -187,13 +162,14 @@ nav ul li a:hover {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px 4%;
+    margin-bottom: 100px;
 }
 
 #contact h2 {
     font-family: "norman-variable", sans-serif;
     font-variation-settings: 'wght' 400;
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 120px;
     color: #333;
 }
 
@@ -240,6 +216,7 @@ footer .footer-nav {
     display: flex;
     justify-content: right;
     margin-bottom: 20px;
+    margin-right: 130px;
 }
 
 .site-footer a {
@@ -284,11 +261,6 @@ footer .footer-nav {
     color: #333;
 }
 
-.WORKS img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
 
 
 
@@ -308,19 +280,122 @@ footer .footer-nav {
     color: #333;
 }
 
-.content img {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin-right: 30px;
+.content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
 }
+
+.content1 img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+
 
 .WORKSS-text {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-weight: 300;
     font-style: normal;
+    font-size: 14px;
     text-align: left;
 }
 
 
 
+
+
+
+/*Works Gallery*/
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    gap: 16px;
+}
+
+.gallery-item {
+    text-align: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.caption {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 768px) {
+
+    .site-header {
+        display: flex;
+        height: 50px;
+    }   
+    .nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+        z-index: 500;
+    }
+
+    .nav.open {
+        max-height: 300px;
+        /* メニューの高さに合わせて調整 */
+        opacity: 1;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1100;
+        position: relative;
+    }
+
+    footer .footer-nav {
+        display: flex;
+        justify-content: right;
+        margin-bottom: 20px;
+        margin-right: auto;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .WORKSS-text {
+        font-family: "hiragino-kaku-gothic-pron", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 9px;
+    }
+}
