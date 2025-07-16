@@ -19,16 +19,6 @@
     border-radius: 2px;
 }
 
-
-
-
-
-
-
-
-
-
-
 .img1 {
     display: block;
     margin: 0 auto;
@@ -55,7 +45,6 @@
 
 .site-header {
     display: flex;
-    max-width: 960px;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
