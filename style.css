@@ -321,6 +321,7 @@ footer .footer-nav {
     grid-template-columns: repeat(3, 1fr);
     max-width: 1200px;
     gap: 16px;
+    margin-bottom: 100px;
 }
 
 .gallery-item {
