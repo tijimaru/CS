@@ -19,6 +19,10 @@
     border-radius: 2px;
 }
 
+.bxslider{
+    max-width: auto;
+}
+
 .img1 {
     display: block;
     margin: 0 auto;
