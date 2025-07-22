@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+/* CSS Document */
+/*右側にメニューを配置するためのCSS*/
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100vh;
+    background-color: #ffffff;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+}
+
+.menu ul {
+    list-style: none;
+    /* リストのスタイルをなしに */
+    padding: 0;
+    /* パディングをリセット */
+    margin: 0;
+    /* マージンをリセット */
+}
+
+.menu li {
+    margin-bottom: 10px;
+    /* 各メニュー項目の下にスペースを追加 */
+}
+
+.menu-list a {
+    writing-mode: vertical-rl;
+    position: relative;
+    text-decoration: none;
+    /* リンクの下線を削除 */
+    color: #333;
+    display: block;
+    /* リンク領域をクリックしやすくする */
+    padding: 10px;
+}
+
+
+/*.menu-list a:hover {
+    border-left: 1px solid black;
+}*/
+
+/* 下線アニメーション（縦線） */
+.menu-list a::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    /* 文字の左側に線を表示 */
+    top: 0;
+    width: 1px;
+    height: 0;
+    background-color: black;
+    transition: height 0.3s ease;
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 250;
+}
+
+.menu-list a:hover::before {
+    height: 100%;
+    /* 上から下に伸びる */
+}
+
+
+
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    color: #333;
+}
+
+/*mainvisual*/
+.top {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 4%
+}
+
+header h1 {
+    font-family: "norman-variable", sans-serif;
+    font-variation-settings: 'wght' 400;
+    font-size: 15rem;
+    margin-bottom:0px;
+    user-select: none;
+}
+header p {
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 400;
+    font-size: 1rem;
+    margin: auto;
+    padding-left: 3%;
+    user-select: none;
+}
+
+.header-image {
+    width: 100%;
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 0 0 auto;
+    padding-top: 10%;
+    pointer-events: none;
+}   
+/*Works*/
+h2 {
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 200;
+    font-size: 25px;
+    user-select: none;
+    margin-top: 100px;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #818080;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+.viewmore {
+    text-decoration: none;
+    color: #333;
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 500;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}   
+.viewmore:hover {
+    color: #cbcbcb;
+}
+
+/*profile*/
+.profile {
+    padding: 100px 100px 150px;
+    user-select: none;
+}
+
+.profile p {
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 500;
+    font-size: 13px;
+    line-height: 1rem;
+}
+
+h3 {
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 300;
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+.nav-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 200px 0 200px;
+    /*user-select: none;*/
+}
+
+h4 {
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 400;
+    font-size: 1rem;
+
+}
+
+.sitemap ul {
+    padding: 0px;
+}
+.sitemap li {
+    list-style: none;
+}
+.sitemap a {
+    text-decoration: none;
+    color: #333;
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 500;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.sitemap a:hover {
+    color: #cbcbcb;
+}
+
+.snsnav ul {
+    padding: 0px;
+}
+.snsnav li {
+    list-style: none;
+}
+
+.snsnav a {
+    color: #333;
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 500;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.snsnav a:hover {
+    color: #cbcbcb;
+}
+
+
+@media (max-width: 768px) {}
