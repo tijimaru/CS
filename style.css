@@ -77,6 +77,7 @@
 /*mainvisual*/
 body {
     background-color: #FFFEF9;
+    padding: 0px 100px 0px 0px;
 }
 
 .top {
@@ -525,7 +526,9 @@ h4 {
 }
 
 @media (max-width: 480px) {
-
+    body {
+        padding: 0px 50px 0px 0px;
+    }
     .menu-list a::before {
         left: 10px;
         width: 0.1px;
