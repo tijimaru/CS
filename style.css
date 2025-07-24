@@ -362,7 +362,7 @@ h3 {
 .nav-footer {
     display: flex;
     justify-content: space-around;
-    padding: 200px 0 200px;
+    padding: 100px 0 100px;
     /*user-select: none;*/
 }
 
