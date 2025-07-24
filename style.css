@@ -28,6 +28,9 @@
 }
 
 .menu-list a {
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 300;
+    font-size: 1rem;
     writing-mode: vertical-rl;
     position: relative;
     text-decoration: none;
@@ -54,8 +57,6 @@
     height: 0;
     background-color: black;
     transition: height 0.3s ease;
-    font-family: "source-han-sans-jp-variable", sans-serif;
-    font-variation-settings: 'wght' 250;
 }
 
 .menu-list a:hover::before {
@@ -165,7 +166,7 @@ h2 {
 
 
 .work-item1 {
-    transform: translateY(50px);
+    transform: translateY(80px);
     text-decoration: none;
 }
 
@@ -174,7 +175,7 @@ h2 {
 }
 
 .work-item3 {
-    transform: translateY(50px);
+    transform: translateY(80px);
     text-decoration: none;
 }
 
@@ -183,7 +184,7 @@ h2 {
 }
 
 .work-item5 {
-    transform: translateY(50px);
+    transform: translateY(80px);
 }
 
 .work-item6 {
@@ -191,7 +192,7 @@ h2 {
 }
 
 .work-item7 {
-    transform: translateY(50px);
+    transform: translateY(80px);
 }
 
 .work-item8 {
@@ -243,19 +244,84 @@ h2 {
     font-size: 13px;
     display: flex;
     flex-direction: column;
-    text-align: right;
+    text-align: center;
     text-decoration: underline;
     transition: color 0.3s ease;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 .viewmore:hover {
     color: #cbcbcb;
 }
 
+.viewmore1 {
+    text-decoration: none;
+    color: #333;
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 400;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    margin-top: 100px;
+}
+
+.viewmore1:hover {
+    color: #cbcbcb;
+}
+
 /*works*/
 .works {
     padding: 25px 0 200px;
+}
+
+/*worksss*/
+.worksss {
+    padding: 20px 50px 100px;
+}
+
+.category1 {
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 500;
+    font-size: 14px;
+    color: #9e9e9e;
+    line-height: 160%;
+    text-align: left;
+    transform: translateY(-20px);
+}
+
+.site {
+    display: flex;
+    justify-content: flex-end;
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 400;
+    font-size: 13px;
+    text-decoration: none;
+    color: #333;
+    line-height: 2rem;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.site:hover {
+    color: #cbcbcb;
+}
+
+.worksss p {
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 500;
+    font-size: 13px;
+    line-height: 2rem;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.worksss img {
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
 }
 
 
@@ -267,8 +333,7 @@ h2 {
 
 /*profile*/
 .profile {
-    padding: 100px 100px 150px;
-    user-select: none;
+    padding: 100px 100px 100px;
 }
 
 .profile p {
@@ -286,24 +351,40 @@ h3 {
 }
 
 /*moreProfile*/
-.moreProfile  {
+.moreProfile {
     padding: 100px 50px 150px;
-    user-select: none;
 }
 
 .moreProfile p {
     font-family: "source-han-sans-jp-variable", sans-serif;
     font-variation-settings: 'wght' 500;
     font-size: 13px;
-    line-height: 1rem;
-    margin-bottom: 20px;
+    line-height: 0.75rem;
+    margin-bottom: 15px;
 }
 
 .moreProfile h3 {
     font-family: "source-han-sans-jp-variable", sans-serif;
-    font-variation-settings: 'wght' 300;
-    font-size: 20px;
+    font-variation-settings: 'wght' 200;
+    font-size: 30px;
     margin-top: 0px;
+}
+
+.hobby {
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 400;
+    font-size: 15px;
+    line-height: 1rem;
+    margin-top: 60px;
+}
+
+.skill {
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 400;
+    font-size: 15px;
+    line-height: 1rem;
+    color: #9e9e9e;
+    margin-top: -20px;
 }
 
 
@@ -322,7 +403,7 @@ h3 {
 
 
 /*contact*/
-.contact  {
+.contact {
     display: flex;
     flex-direction: column;
     padding: 100px 50px 150px;
@@ -336,16 +417,18 @@ h3 {
     line-height: 1rem;
     margin-bottom: 20px;
 }
+
 .contact a {
-    text-decoration: none;
-    color: #333;
     font-family: "source-han-sans-jp-variable", sans-serif;
     font-variation-settings: 'wght' 400;
     font-size: 15px;
+    text-decoration: none;
+    color: #333;
     line-height: 2rem;
     transition: color 0.3s ease;
     text-decoration: underline;
 }
+
 .contact a:hover {
     color: #cbcbcb;
 }
@@ -371,7 +454,7 @@ h4 {
     font-variation-settings: 'wght' 300;
     font-size: 1rem;
     user-select: none;
-}   
+}
 
 .sitemap ul {
     padding: 0px;
@@ -419,4 +502,131 @@ h4 {
 }
 
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+
+    .menu {
+        padding: 0px;
+        padding-top: 30px;
+    }
+
+    .top {
+        max-width: 768px;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #scrollToTopBtn {
+        bottom: 20px;
+        right: 20px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .top {
+        max-width: 480px;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    header h1 {
+        font-size: 8rem;
+    }
+
+    header p {
+        font-size: 0.75rem;
+    }
+    .sub-header h1 {
+        font-size: 3rem;
+    }
+    .sub-header p {
+        font-size: 0.5rem;  
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 100px;
+    }
+    .work-item1, .work-item3, .work-item5, .work-item7 {
+        transform: translateY(0);
+    }
+
+    .category {
+        font-size: 9px;
+    }
+
+    .tittle {
+        font-size: 12px;
+    }
+    
+
+    .profile {
+        padding: 50px 0px 50px;
+    }
+
+    .profile p {
+        font-size: 8px;
+    }
+
+    .moreProfile {
+        padding: 50px 0px 50px;
+    }
+
+    .moreProfile p {
+        font-size: 8px;
+    }
+
+    .moreProfile h3 {
+        font-size: 15px;
+    }
+
+    .hobby {
+        font-size: 12px;
+        line-height: 0rem;
+        margin-top: 20px;
+    }
+    .skill {
+        margin-top: -10px;
+    }
+
+
+    h3 {
+        font-size: 15px;
+    }
+
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    .viewmore, .viewmore1 {
+        font-size: 8px;
+        margin-top: 50px;
+    }
+
+    .contact {
+        padding: 50px 0px 50px;
+    }
+
+    .contact p {
+        font-size: 10px;
+    }   
+
+    .contact a {
+        font-size: 10px;
+    }
+
+    .nav-footer {
+        padding: 50px 0 50px;
+    }
+    h4 {
+        font-size: 0.75rem;
+    }
+    .sitemap a, .snsnav a {
+        font-size: 0.5rem;
+    }
+
+    .copyright {
+        font-size: 0.75rem;
+    }
+}
