@@ -644,4 +644,23 @@ h4 {
     .copyright {
         font-size: 0.75rem;
     }
+
+
+    .worksss {
+        padding: 20px 0px 50px;
+    }
+    .category1 {
+        font-size: 10px;
+    }
+    .site {
+        font-size: 10px;
+    }
+    .worksss p {
+        font-size: 10px;
+    }
+    .worksss img {
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+    }
 }
