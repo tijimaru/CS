@@ -157,8 +157,12 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
-    ;
 }
+
+.grid :hover {
+    color: #a0a0a0;
+}
+
 
 .work-item1 {
     transform: translateY(50px);
@@ -209,6 +213,7 @@ h2 {
     margin-bottom: 7px;
     border-bottom: solid 1px #757575;
 }
+
 
 .tittle {
     font-family: "source-han-sans-jp-variable", sans-serif;
@@ -365,8 +370,8 @@ h4 {
     font-family: "source-han-sans-jp-variable", sans-serif;
     font-variation-settings: 'wght' 400;
     font-size: 1rem;
-
-}
+    user-select: none;
+}   
 
 .sitemap ul {
     padding: 0px;
@@ -407,6 +412,10 @@ h4 {
 
 .snsnav a:hover {
     color: #cbcbcb;
+}
+
+.copyright {
+    user-select: none;
 }
 
 
