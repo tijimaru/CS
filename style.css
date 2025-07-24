@@ -525,6 +525,11 @@ h4 {
 }
 
 @media (max-width: 480px) {
+
+    .menu-list a::before {
+        left: 10px;
+        width: 0.1px;
+    }
     .top {
         max-width: 480px;
         width: 70%;
@@ -584,7 +589,11 @@ h4 {
     .hobby {
         font-size: 12px;
         line-height: 0rem;
+        ;
         margin-top: 20px;
+    }
+    .hobby p {
+        margin: auto;
     }
     .skill {
         margin-top: -10px;
