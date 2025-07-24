@@ -543,6 +543,11 @@ h4 {
     header p {
         font-size: 0.75rem;
     }
+
+    .header-image {
+        width: 100%;
+        max-width: 80%;
+    }
     .sub-header h1 {
         font-size: 3rem;
     }
