@@ -539,7 +539,7 @@ h4 {
 
 @media (max-width: 480px) {
     body {
-        padding: 0px 50px 0px 0px;
+        padding: 0px 50px 0px 10px;
     }
     .menu-list a::before {
         left: 10px;
@@ -547,7 +547,7 @@ h4 {
     }
     .top {
         max-width: 480px;
-        width: 70%;
+        width: 90%;
         margin: 0 auto;
     }
 
@@ -562,7 +562,7 @@ h4 {
     .header-image {
         width: 100%;
         max-width: 80%;
-        transform: translateX(45px);
+        transform: translateX(20px);
     }
     .sub-header h1 {
         font-size: 3rem;
@@ -673,6 +673,7 @@ h4 {
     }
     .worksss p {
         font-size: 10px;
+        line-height: 1.5rem;
     }
     .worksss img {
         width: 90%;
