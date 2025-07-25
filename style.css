@@ -105,12 +105,13 @@ header p {
 
 .header-image {
     width: 100%;
-    max-width: 60%;
+    max-width: 80%;
     height: auto;
     display: block;
     margin: 0 0 0 auto;
     padding-top: 10%;
     pointer-events: none;
+    transform: translateX(150px);
 }
 
 .sub-header h1 {
@@ -504,8 +505,19 @@ h4 {
 }
 
 
+
+@media (max-width: 1200px) {
+    .header-image {
+        transform: translateX(75px);
+    }
+}
+
+
 @media (max-width: 768px) {
 
+    .header-image {
+        transform: translateX(100px);
+    }
     .menu {
         padding: 0px;
         padding-top: 30px;
@@ -550,6 +562,7 @@ h4 {
     .header-image {
         width: 100%;
         max-width: 80%;
+        transform: translateX(45px);
     }
     .sub-header h1 {
         font-size: 3rem;
