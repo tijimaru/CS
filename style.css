@@ -55,7 +55,7 @@
     top: 0;
     width: 1px;
     height: 0;
-    background-color: black;
+    background-color: #333(0, 0, 0);
     transition: height 0.3s ease;
 }
 
@@ -76,8 +76,16 @@
 
 /*mainvisual*/
 body {
-    background-color: #FFFEF9;
-    padding: 0px 100px 0px 0px;
+    padding: 60px 100px 20px 0px;
+    /* 上下にゆったりとした余白を作り、中央の白を引き立てる */
+    background-color: #fffef9;
+    /* 参考画像に近い、洗練された深いチャコールグレー */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
 }
 
 .top {
@@ -253,12 +261,12 @@ h2 {
 
 /*works*/
 .works {
-    padding: 25px 0 200px;
+    margin: 25px 0 200px;
 }
 
 /*worksss*/
 .worksss {
-    padding: 20px 50px 100px;
+    margin: 20px 50px 100px;
 }
 
 .category1 {
@@ -297,15 +305,81 @@ h2 {
     text-align: center;
 }
 
-.worksss img {
-    width: 70%;
+.webimg {
+    width: 100%;
     height: auto;
-    margin-left: 15%;
 }
 
 
 
+/*写真のレイアウト*/
+/* ==========================================================================
+   2. 写真集の土台（中央に浮かぶ白いアートブック）
+   ========================================================================== */
+.photobook-container {
+    background-color: #ffffff;
+    /* まっさらな白（画用紙のイメージ） */
+    width: 100%;
+    max-width: 1000px;
+    /* 写真集として美しく見える最適な横幅 */
+    margin: 45px;
+    /* 内側の余白を贅沢にとることで、一気にモダン（高級）になります */
+    /*box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);*/
+    /* ほんのり影をつけて、立体的な本のように見せる */
 
+    /* Masonry（メゾナリー）配置の核心部分 */
+    column-width: 280px;
+    /* 1列の最小幅（画面サイズに合わせて自動で2列〜3列に可変） */
+    column-gap: 40px;
+    /* 列と列の間の贅沢なホワイトスペース */
+}
+
+/* ==========================================================================
+   3. 各写真とキャプションのスタイリング
+   ========================================================================== */
+.masonry-item {
+    margin-bottom: 40px;
+    /* 下方向の余白（column-gapと合わせると美しく整います） */
+    break-inside: avoid;
+    /* 【最重要】写真が途中で次の列に千切れるのを防ぐ */
+}
+
+.masonry-item img {
+    width: 100%;
+    height: auto;
+    /* 縦横比を完全に維持 */
+    display: block;
+    border: 1px solid #e5e5e5;
+    /* 印刷された紙の輪郭を思わせる、ごく薄い境界線 */
+    transition: opacity 0.3s ease;
+}
+
+/* マウスを乗せたときに、静かに少しだけ不透明度を変える上品なホバー効果 */
+.masonry-item img:hover {
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. タイポグラフィ（エディトリアル風の静かな文字）
+   ========================================================================== */
+.caption {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+    font-weight: 800;
+    /* 敢えて太く */
+    font-size: 0.7rem;
+    /* 敢えてかなり小さく（ジャンプ率を高める） */
+    letter-spacing: 0.2em;
+    /* 文字の間隔を大胆に広げてモダンにする */
+    text-transform: uppercase;
+    /* 英語をすべて大文字に */
+    margin-top: 12px;
+    margin-bottom: 0;
+    color: #1a1a1a;
+    /* 真っ黒の一歩手前の締まった黒 */
+}
+
+/*--------------------------------------------*/
 
 
 
@@ -495,6 +569,7 @@ h4 {
     .header-image {
         transform: translateX(100px);
     }
+
     .menu {
         padding: 0px;
         padding-top: 30px;
@@ -518,10 +593,12 @@ h4 {
     body {
         padding: 0px 50px 0px 10px;
     }
+
     .menu-list a::before {
         left: 10px;
         width: 0.1px;
     }
+
     .top {
         max-width: 480px;
         width: 90%;
@@ -541,17 +618,24 @@ h4 {
         max-width: 80%;
         transform: translateX(20px);
     }
+
     .sub-header h1 {
         font-size: 3rem;
     }
+
     .sub-header p {
-        font-size: 0.5rem;  
+        font-size: 0.5rem;
     }
+
     .grid {
         grid-template-columns: 1fr;
         gap: 100px;
     }
-    .work-item1, .work-item3, .work-item5, .work-item7 {
+
+    .work-item1,
+    .work-item3,
+    .work-item5,
+    .work-item7 {
         transform: translateY(0);
     }
 
@@ -562,7 +646,7 @@ h4 {
     .tittle {
         font-size: 12px;
     }
-    
+
 
     .profile {
         padding: 50px 0px 50px;
@@ -590,9 +674,11 @@ h4 {
         ;
         margin-top: 20px;
     }
+
     .hobby p {
         margin: auto;
     }
+
     .skill {
         margin-top: -10px;
     }
@@ -602,12 +688,13 @@ h4 {
         font-size: 15px;
     }
 
-    
+
     h2 {
         font-size: 18px;
     }
-    
-    .viewmore, .viewmore1 {
+
+    .viewmore,
+    .viewmore1 {
         font-size: 8px;
         margin-top: 50px;
     }
@@ -618,7 +705,7 @@ h4 {
 
     .contact p {
         font-size: 10px;
-    }   
+    }
 
     .contact a {
         font-size: 10px;
@@ -627,10 +714,13 @@ h4 {
     .nav-footer {
         padding: 50px 0 50px;
     }
+
     h4 {
         font-size: 0.75rem;
     }
-    .sitemap a, .snsnav a {
+
+    .sitemap a,
+    .snsnav a {
         font-size: 0.5rem;
     }
 
@@ -642,21 +732,26 @@ h4 {
     .worksss {
         padding: 20px 0px 50px;
     }
+
     .category1 {
         font-size: 10px;
     }
+
     .site {
         font-size: 10px;
     }
+
     .worksss p {
         font-size: 10px;
         line-height: 1.5rem;
     }
+
     .worksss img {
         width: 90%;
         height: auto;
         margin-left: 5%;
     }
+
     .divider {
         margin: 20px -20px;
     }
