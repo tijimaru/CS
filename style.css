@@ -41,11 +41,6 @@
     padding: 10px;
 }
 
-
-/*.menu-list a:hover {
-    border-left: 1px solid black;
-}*/
-
 /* 下線アニメーション（縦線） */
 .menu-list a::before {
     content: '';
@@ -55,7 +50,7 @@
     top: 0;
     width: 1px;
     height: 0;
-    background-color: #333(0, 0, 0);
+    background-color: #333;
     transition: height 0.3s ease;
 }
 
@@ -216,6 +211,12 @@ h2 {
 .photo img {
     width: 100%;
     height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.photo img:hover {
+    opacity: 0.85;
+    cursor: pointer;
 }
 
 
@@ -313,51 +314,40 @@ h2 {
 
 
 /*写真のレイアウト*/
-/* ==========================================================================
-   2. 写真集の土台（中央に浮かぶ白いアートブック）
-   ========================================================================== */
-.photobook-container {
-    background-color: #ffffff;
-    /* まっさらな白（画用紙のイメージ） */
+
+/* 白い写真集の土台（Grid版） */
+.photobook-container.grid-version {
     width: 100%;
     max-width: 1000px;
-    /* 写真集として美しく見える最適な横幅 */
-    margin: 45px;
-    /* 内側の余白を贅沢にとることで、一気にモダン（高級）になります */
-    /*box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);*/
-    /* ほんのり影をつけて、立体的な本のように見せる */
-
-    /* Masonry（メゾナリー）配置の核心部分 */
-    column-width: 280px;
-    /* 1列の最小幅（画面サイズに合わせて自動で2列〜3列に可変） */
-    column-gap: 40px;
-    /* 列と列の間の贅沢なホワイトスペース */
+    padding: 60px;
+    /* Gridの設定 */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* 画面幅に合わせる */
+    grid-auto-rows: 200px;
+    /* 縦の1マスの基本の高さ */
+    gap: 40px;
+    /* 余白 */
 }
 
-/* ==========================================================================
-   3. 各写真とキャプションのスタイリング
-   ========================================================================== */
-.masonry-item {
-    margin-bottom: 40px;
-    /* 下方向の余白（column-gapと合わせると美しく整います） */
-    break-inside: avoid;
-    /* 【最重要】写真が途中で次の列に千切れるのを防ぐ */
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.masonry-item img {
+.grid-item img {
     width: 100%;
-    height: auto;
-    /* 縦横比を完全に維持 */
-    display: block;
+    height: 100%;
+    object-fit: cover;
+    /* マスの中に写真を綺麗に収める */
+    /*filter: grayscale(100%);*/
     border: 1px solid #e5e5e5;
-    /* 印刷された紙の輪郭を思わせる、ごく薄い境界線 */
-    transition: opacity 0.3s ease;
 }
 
-/* マウスを乗せたときに、静かに少しだけ不透明度を変える上品なホバー効果 */
-.masonry-item img:hover {
-    opacity: 0.85;
-    cursor: pointer;
+/* 【ここがポイント】縦長写真は縦方向に2マス分（span 2）を占有させる */
+.grid-item.vertical {
+    grid-row: span 2;
 }
 
 /* ==========================================================================
@@ -377,6 +367,73 @@ h2 {
     margin-bottom: 0;
     color: #1a1a1a;
     /* 真っ黒の一歩手前の締まった黒 */
+}
+
+
+/* 拡大時の背景（黒い画面） */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0.95);
+    /* 参考画像の背景に近い、高級感のある黒 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* 一番手前に表示 */
+
+    /* 初期状態は透明にして隠しておく */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    /* ふわっと表示させるアニメーション */
+}
+
+/* JSでこのクラスがついたら表示 */
+.lightbox-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 拡大される画像自体のスタイリング */
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 85vh;
+    /* 画面の縦幅を超えないように調整 */
+    object-fit: contain;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    /* 画像も少し下から浮き上がるような演出 */
+    transform: scale(0.95);
+    transition: transform 0.4s ease;
+}
+
+.lightbox-overlay.active img {
+    transform: scale(1);
+    /* アクティブになったら元のサイズに */
+}
+
+/* 閉じるボタン（×） */
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.close-btn:hover {
+    opacity: 0.7;
+}
+
+.clickable-img {
+    cursor: zoom-in;
 }
 
 /*--------------------------------------------*/
