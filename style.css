@@ -735,12 +735,12 @@ h4 {
     .moreProfile {
         padding: 50px 0px 50px;
         flex-direction: column;
-        gap: 50px;
+        gap: 30px;
     }
 
     .profile-image {
         width: 100%;
-        max-width: 300px;
+        max-width: 200px;
         height: auto;
         display: block;
         margin: 20px auto 0 auto;
