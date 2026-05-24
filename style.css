@@ -318,13 +318,13 @@ h2 {
 /* 白い写真集の土台（Grid版） */
 .photobook-container.grid-version {
     width: 100%;
-    max-width: 1000px;
-    padding: 60px;
+    max-width: 1200px;
+    padding: 0px;
     /* Gridの設定 */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     /* 画面幅に合わせる */
-    grid-auto-rows: 200px;
+    grid-auto-rows: 275px;
     /* 縦の1マスの基本の高さ */
     gap: 40px;
     /* 余白 */
@@ -434,6 +434,17 @@ h2 {
 
 .clickable-img {
     cursor: zoom-in;
+}
+
+.external-link {
+    text-decoration: none;
+    color: #333;
+    font-family: "source-han-sans-jp-variable", sans-serif;
+    font-variation-settings: 'wght' 400;
+    font-size: 13px;
+    line-height: 2rem;
+    text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
 /*--------------------------------------------*/
